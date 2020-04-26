@@ -1,6 +1,9 @@
 package com.example.demo.pojo;
 
+import com.example.demo.annotations.MyCustomConstraint;
+
 import java.io.Serializable;
+import java.util.Date;
 
 public class CrtUser implements Serializable {
     private Long userId;
@@ -9,11 +12,11 @@ public class CrtUser implements Serializable {
 
     private String userPassword;
 
-    private Object createDate;
+    private Date createDate;
 
     private String createUser;
 
-    private Object updateDate;
+    private Date updateDate;
 
     private String updateUser;
 
@@ -45,11 +48,11 @@ public class CrtUser implements Serializable {
         this.userPassword = userPassword == null ? null : userPassword.trim();
     }
 
-    public Object getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Object createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
@@ -61,11 +64,11 @@ public class CrtUser implements Serializable {
         this.createUser = createUser == null ? null : createUser.trim();
     }
 
-    public Object getUpdateDate() {
+    public Date getUpdateDate() {
         return updateDate;
     }
 
-    public void setUpdateDate(Object updateDate) {
+    public void setUpdateDate(Date updateDate) {
         this.updateDate = updateDate;
     }
 
